@@ -32,7 +32,7 @@ func TestCalc(t *testing.T) {
 	}
 	for i, str := range Tests.input {
 		result, err := calc(str)
-		if !reflect.DeepEqual(result, Tests.expected[i]) && err != nil {
+		if !reflect.DeepEqual(result, Tests.expected[i]) || err != nil {
 			t.Error("expected :", Tests.expected[i], "but have :", result)
 		}
 	}
@@ -97,7 +97,7 @@ func TestCalcSpacesInput(t *testing.T) {
 	}
 	for i, str := range Tests.input {
 		result, err := calc(str)
-		if !reflect.DeepEqual(result, Tests.expected[i]) && err != nil {
+		if !reflect.DeepEqual(result, Tests.expected[i]) || err != nil {
 			t.Error("expected :", Tests.expected[i], "but have :", result)
 		}
 	}
