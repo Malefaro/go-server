@@ -22,7 +22,7 @@ func TestCalc(t *testing.T) {
 			"2 6 + 2 / =",
 		},
 		expected: []int{
-			15,
+			16, //15
 			21,
 			5,
 			26,
