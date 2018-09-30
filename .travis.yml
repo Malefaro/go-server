@@ -13,4 +13,4 @@ before_install:
   - docker build .
 
 script:
-  - go run go-server
+  - go test -v
